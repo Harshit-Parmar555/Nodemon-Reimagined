@@ -16,19 +16,25 @@ const sponsors = [one, two, three, four, five, six, seven, eight, nine, ten];
 
 export default function SponsorsMarquee() {
   return (
-    <div className="w-full flex flex-col items-center overflow-hidden py-6 flex items-center mt-12 gap-14">
-      <motion.div
-        className="flex gap-28"
-        initial={{ x: "100%" }}
-        animate={{ x: "-100%" }}
-        transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
-      >
-        {[...sponsors, ...sponsors].map((logo, index) => (
-          <img key={index} src={logo} alt="Sponsor" className="h-20 w-auto" />
-        ))}
-      </motion.div>
+    <div className="w-full flex flex-col items-center overflow-hidden py-6 mt-12 gap-14">
+      {/* Marquee Wrapper */}
+      <div className="w-full flex overflow-hidden relative">
+        <motion.div
+          className="flex gap-28 min-w-max"
+          initial={{ x: 0 }}
+          animate={{ x: "-50%" }}
+          transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+        >
+          {/* Duplicate logos to ensure seamless looping */}
+          {[...sponsors, ...sponsors].map((logo, index) => (
+            <img key={index} src={logo} alt="Sponsor" className="h-20 w-auto" />
+          ))}
+        </motion.div>
+      </div>
+
+      {/* Call to Action */}
       <button className="py-2 px-4 font-[Inter] text-white rounded-full border-[1px] border-zinc-900">
-        Become A Sponser
+        Become A Sponsor
       </button>
     </div>
   );
