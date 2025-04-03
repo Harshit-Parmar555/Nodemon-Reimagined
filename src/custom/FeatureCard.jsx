@@ -1,10 +1,10 @@
 import { ExternalLink, Recycle } from "lucide-react";
 
-const FeatureCard = ({ heading, para }) => {
+const FeatureCard = ({ heading, para, icon: Icon }) => {
   return (
     <div className="w-full sm:max-w-sm h-auto flex flex-col justify-between gap-3 px-5 py-4 rounded-xl border-2 border-zinc-800 shadow-md bg-gradient-to-t from-[#0a0a0a] to-[#161616] cursor-pointer hover:shadow-lg transition-shadow">
       {/* Icon */}
-      <Recycle size={30} className="text-zinc-300" aria-label="Feature Icon" />
+      <Icon size={30} className="text-zinc-300" aria-label="Feature Icon" />
 
       {/* Content */}
       <div className="flex flex-col gap-2">

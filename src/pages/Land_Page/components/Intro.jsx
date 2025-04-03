@@ -1,27 +1,39 @@
 import React from "react";
 import { motion } from "framer-motion";
 import FeatureCard from "../../../custom/FeatureCard";
+import {
+  Recycle,
+  Code,
+  MonitorSmartphone,
+  Terminal,
+  Package,
+} from "lucide-react";
 
 const features = [
   {
     heading: "Automatic Restart on Code Changes",
     para: "Nodemon watches for file changes in your project and automatically restarts the server whenever you update the code. This eliminates the need for manual restarts, making development smoother and more efficient.",
+    Icon: Recycle,
   },
   {
     heading: "Increased Developer Productivity",
     para: "By reducing the hassle of stopping and restarting the server manually, Nodemon saves valuable time. Developers can focus on writing and testing code without interruptions, leading to a faster development cycle.",
+    Icon: Code,
   },
   {
     heading: "Cross-Platform Support",
     para: "Nodemon works seamlessly on Windows, macOS, and Linux, ensuring compatibility across different operating systems. This makes it a reliable tool for teams working in diverse environments.",
+    Icon: MonitorSmartphone,
   },
   {
     heading: "Custom Script Execution",
     para: "Developers can configure Nodemon to run custom scripts before or after restarting the server. This is useful for running database migrations, clearing cache, or executing other necessary tasks automatically.",
+    Icon: Terminal,
   },
   {
     heading: "Works with Any Node.js Application",
     para: "Nodemon is framework-agnostic and supports any Node.js project, whether it’s an API, a web server, or a CLI tool. It integrates easily with Express.js, Fastify, NestJS, and other Node-based frameworks.",
+    Icon: Package,
   },
 ];
 
@@ -67,6 +79,7 @@ const Intro = () => {
             key={index}
             heading={feature.heading}
             para={feature.para}
+            icon={feature.Icon}
           />
         ))}
       </motion.div>
