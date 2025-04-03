@@ -20,13 +20,9 @@ const Hero = () => {
       className="relative w-full h-auto overflow-hidden flex flex-col items-center mt-36 md:mt-48 gap-8"
     >
       {/* Animated Welcome Button */}
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        className="flex items-center border-[1px] border-zinc-800 rounded-full py-1 px-4 text-sm text-white"
-      >
+      <button className="flex items-center border-[1px] border-zinc-800 rounded-full py-1 px-4 text-sm text-white">
         ✨ Welcome to Nodemon <ArrowRight />
-      </motion.button>
+      </button>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -49,7 +45,7 @@ const Hero = () => {
         transition={{ duration: 0.5, delay: 0.4 }}
         className="flex flex-col items-center"
       >
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 p-6">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
